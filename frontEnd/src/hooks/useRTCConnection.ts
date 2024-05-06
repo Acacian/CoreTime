@@ -32,10 +32,10 @@ const useRTCConnection = (roomId: string, localStream: MediaStream) => {
       [RTC_SOCKET_RECEIVE_EVENT.CANDIDATE]: onCandidate,
       [RTC_SOCKET_RECEIVE_EVENT.USER_EXIT]: onUserExit,
       exception: throwConnectionError,
-      error: throwSignalError,
+      error: throwSignalError
     };
 
-    socket = createSocket(socketURL, socketCallbacks);
+    socket = createSocket(socketURL, socketCallbacks)
 
     socket.connect();
 
