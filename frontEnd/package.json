@@ -11,6 +11,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nestjs/platform-socket.io": "^10.3.8",
+    "@nestjs/websockets": "^10.3.8",
     "@tanstack/react-query": "^5.8.7",
     "axios": "^1.6.2",
     "dompurify": "^3.0.6",
