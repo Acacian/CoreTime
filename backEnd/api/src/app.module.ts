@@ -1,6 +1,4 @@
 import { MiddlewareConsumer, Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { LoggerMiddleware } from './common/logger/logger.middleware';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TimeoutInterceptor } from './common/interceptor/timeout.intercetor';
@@ -72,8 +70,8 @@ import { TransactionModule } from './common/transaction/transaction.module';
     CodesModule,
     TransactionModule,
   ],
-  controllers: [AppController],
-  providers: [AppService, TimeoutInterceptor, WinstonLogger],
+  controllers: [],
+  providers: [TimeoutInterceptor, WinstonLogger],
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
