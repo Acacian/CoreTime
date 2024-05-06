@@ -1,7 +1,5 @@
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ConnectionsModule } from './connections/connections.module';
 import { RedisModule } from '@liaoliaots/nestjs-redis';
 import { EventsModule } from './events/events.module';
@@ -24,7 +22,7 @@ import { EventsModule } from './events/events.module';
     ConnectionsModule,
     EventsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

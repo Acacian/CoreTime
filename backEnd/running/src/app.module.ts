@@ -1,6 +1,4 @@
 import { MiddlewareConsumer, Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { LoggerMiddleware } from './common/logger/logger.middleware';
 import { SlackModule } from 'nestjs-slack-webhook';
@@ -25,8 +23,8 @@ import { MqModule } from './mq/mq.module';
     MqModule,
     RedisModule,
   ],
-  controllers: [AppController],
-  providers: [AppService, WinstonLogger],
+  controllers: [],
+  providers: [WinstonLogger],
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
